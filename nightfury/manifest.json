@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "Nightfury",
+  "version": "1.2",
+  "description": "Uses the Gemini API to suggest answers on Google Forms.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://docs.google.com/forms/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://docs.google.com/forms/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "action": {
+    "default_title": "Nightfury Settings",
+    "default_icon": "icon.png" 
+  },
+  "commands": {
+    "load-answers": {
+      "suggested_key": {
+        "default": "Ctrl+Q"
+      },
+      "description": "Load answers from Gemini"
+    },
+    "toggle-answers": {
+      "suggested_key": {
+        "default": "Ctrl+X"
+      },
+      "description": "Show/Hide the suggested answers"
+    }
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}
