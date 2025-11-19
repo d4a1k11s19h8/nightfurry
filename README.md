@@ -1,5 +1,3 @@
-Here is a professional and comprehensive `README.md` for your project. You can create a file named `README.md` in your root folder and paste this content in.
-
 -----
 
 # 🦊 Nightfury - AI Google Forms Assistant
